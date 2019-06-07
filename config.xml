@@ -1,10 +1,10 @@
-<widget id="A6960884562755"  version="0.0.1">
+<widget id="A6003553370905"  version="0.0.1">
 	<name>dianping</name>
 	<description>
-	    仿大众点评
+	    面基，共享大巴
 	</description>
-	<author email="2743481639@qq.com" href="2743481639@qq.com">
-	    Developer
+	<author email="stillthelian@gmail.com" href="stillthelian@gmail.com">
+	    Yuemin Wang
 	</author>
 	<content src="index.html" />
 	<preference name="pageBounce" value="false"/>
@@ -17,7 +17,7 @@
 	<preference name="fullScreen" value="false"/>
 	<preference name="autoUpdate" value="true"/>
 	<preference name="smartUpdate" value="false"/>
-	<preference name="debug" value="false"/>
+	<preference name="debug" value="true"/>
 	<preference name="statusBarAppearance" value="true"/>
 	<permission name="readPhoneState"/>
 	<permission name="camera"/>
@@ -29,4 +29,3 @@
 	<permission name="hardware"/>
 	<access origin="*"/>
 </widget>
-
