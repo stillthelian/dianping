@@ -28,7 +28,7 @@
 
      /* 第二头部 */
      #topbar_refresh {width: 40px;padding:5px 10px;}
-     .whitebar {background-color: #FF6347;}
+     .whitebar {background-color: #FF6347; height: 50px;}
      #whitecity {height: 50px; line-height: 50px;padding-left: 15px; font-size: 18px;color: #FFFFFF;}
     .secCitylistarrow {vertical-align: top; width: 15px; padding-top: 18px;padding-left: 5px;}
     .secSearch {left: 90px;right: 15px;background-color: #FF8A75;color: #FDC29B;}
@@ -82,7 +82,7 @@
       <!-- 第一头部 -->
       <div id="firstHeader" class="titlebar activebar">
         <div class="topbar">
-          <div class="citylist fl" id="citylist" tapmode="" onclick="openCitylist()">北京<img src="./image/title_home_arrow_down_normal.png" alt="" class="citylistarrow"></div>
+          <div class="citylist fl" id="citylist" tapmode="" onclick="openCitylist()">法兰克福<img src="./image/title_home_arrow_down_normal.png" alt="" class="citylistarrow"></div>
           <div class="search firstSearch"  tapmode="" onclick="openSearch()">
               <img src="./image/ic_home_search.png" alt="">输入商户名、地点
           </div>
@@ -94,7 +94,7 @@
       <!-- 第二头部 -->
       <div id="secHeader" class="titlebar">
         <div class="topbar whitebar">
-          <div class="citylist fl" id="whitecity"  tapmode="" onclick="openCitylist()">北京<img src="./image/title_arrow_down_normal.png" alt="" class="secCitylistarrow"></div>
+          <div class="citylist fl" id="whitecity"  tapmode="" onclick="openCitylist()"><img src="./image/title_arrow_down_normal.png" alt="" class="secCitylistarrow"></div>
           <div class="search secSearch"  tapmode="" onclick="openSearch()">
               <img src="./image/navibar_search_icon_search.png" alt="">搜索团购...
           </div>
@@ -274,9 +274,13 @@
             name: 'forth_frame',
             hidden:true
         });
+        api.setFrameAttr({
+            name: 'fifth_frame',
+            hidden:true
+        });
     }
 
-    // 自己修复ios显示frame的时候bug
+    // 修复ios显示frame的时候bug
     // ios自己主动隐藏后，再open就不显示了
     function showgroup(type)
     {
@@ -364,13 +368,13 @@
             case 'forth_frame':
                 randomSwitchBtn('forth_frame', 3);
                 hideAllFrame();
-                openframeinstance('forth_frame', 0, false);
+                openframeinstance('forth_frame', firstHeaderOffset.h, false);
                 // showgroup('forth_frame');
             break;
             case 'fifth_frame':
                 randomSwitchBtn('fifth_frame', 4);
                 hideAllFrame();
-                openframeinstance('forth_frame', 0, false);
+                openframeinstance('fifth_frame', 0, false);
                 // showgroup('forth_frame');
             break;
             default:
